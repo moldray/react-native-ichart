@@ -72,7 +72,7 @@ function renderChart() {
 }
 ```
 
-##Notice
+## Notice
 
 the IChart render code muse be a global function, it will not work if you add it as a component instance method
 
