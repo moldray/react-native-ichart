@@ -2,7 +2,7 @@
 
 ichart for react-native
 
-*based on ichart:https://github.com/wanghetommy/ichartjs
+*based on ichart: https://github.com/wanghetommy/ichartjs
 
 ---
 
@@ -33,48 +33,43 @@ const styles = {
 };
 
 export default class Example extends Component {
+    renderChart() {
+        var data = [{
+            name: '北京',
+            value: [-9, 1, 12, 20, 26, 30, 32, 29, 22, 12, 0, -6],
+            color: '#1f7e92',
+            line_width: 3
+        }];
+        var chart = new iChart.LineBasic2D({
+            render: 'canvas-container',
+            data: data,
+            title: '北京2012年平均温度情况',
+            width: 300,
+            height: 200,
+            coordinate: {
+                height: '90%',
+                background_color: '#f6f9fa'
+            },
+            sub_option: {
+                hollow_inside: false, //设置一个点的亮色在外环的效果
+                point_size: 16
+            },
+            labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
+        });
+        chart.draw();
+    }
     render() {
         return (
             <View>
                 <IChart
-                    render={renderChart}
+                    render={this.renderChart}
                     style={styles.ichart}
                 />
             </View>
         )
     }
 }
-
-function renderChart() {
-    var data = [{
-        name: '北京',
-        value: [-9, 1, 12, 20, 26, 30, 32, 29, 22, 12, 0, -6],
-        color: '#1f7e92',
-        line_width: 3
-    }];
-    var chart = new iChart.LineBasic2D({
-        render: 'canvas-container',
-        data: data,
-        title: '北京2012年平均温度情况',
-        width: 300,
-        height: 200,
-        coordinate: {
-            height: '90%',
-            background_color: '#f6f9fa'
-        },
-        sub_option: {
-            hollow_inside: false, //设置一个点的亮色在外环的效果
-            point_size: 16
-        },
-        labels: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
-    });
-    chart.draw();
-}
 ```
-
-## Notice
-
-the IChart render code muse be a global function, it will not work if you add it as a component instance method
 
 ## LICENSE
 
