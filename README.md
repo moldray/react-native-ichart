@@ -2,7 +2,7 @@
 
 ichart for react-native
 
-*based on ichart: https://github.com/wanghetommy/ichartjs
+based on ichart: https://github.com/wanghetommy/ichartjs
 
 ---
 
