@@ -14,17 +14,20 @@ $ npm i react-native-ichart --save
 
 ## Usage
 
+init a new project with the name "IchartExample", and place the following codes into index.ios.js, then you can see the demo.
+
 ```
 'use strict';
-
+ 
 import React from 'react-native';
 import IChart from 'react-native-ichart';
-
+ 
 const {
     View,
     Component,
+    AppRegistry
 } = React;
-
+ 
 const styles = {
     ichart: {
         width: 320,
@@ -32,7 +35,7 @@ const styles = {
     }
 };
 
-export default class Example extends Component {
+export default class IchartExample extends Component {
     renderChart() {
         var data = [{
             name: '北京',
@@ -69,6 +72,8 @@ export default class Example extends Component {
         )
     }
 }
+
+AppRegistry.registerComponent('IchartExample', () => IchartExample);
 ```
 
 ## LICENSE

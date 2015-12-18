@@ -1,6 +1,6 @@
 {
   "name": "react-native-ichart",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ichart for react-native",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,4 @@
     "url": "https://github.com/AdonRain/react-native-ichart/issues"
   },
   "homepage": "https://github.com/AdonRain/react-native-ichart#readme",
-  "dependencies": {
-    "react-native": "^0.16.0"
-  }
 }
